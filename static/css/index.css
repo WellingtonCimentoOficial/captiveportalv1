@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #414141;
+}
+input {
+    border: 1.5px solid #ccc;
+    outline: none;
+    padding: 5px 10px;
+    transition: 0.2s;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 15pt;
+}
+input:hover {
+    border-color: rgba(0, 0, 0, 0.178);
+}
+input:focus {
+    border-color: rgba(0, 0, 0, 0.514);
+}
+body {
+    /* background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,29,100,1) 38%, rgba(191,0,255,1) 100%); */
+    background-color: rgb(243, 243, 243);
+    overflow: hidden;
+}
+html {
+    overflow: hidden;
+}
+#section-1 {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+#section-1 div.container {
+    max-width: 500px;
+    padding: 50px 30px;
+    margin: 20px;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1); 
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+#section-1 div.container div.flex-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: orange; */
+}
+#section-1 div.container div.flex-header img {
+    max-width: 200px;
+}
+#section-1 div.container div.flex-header p {
+    padding: 15px 0px;
+    text-align: center;
+}
+#section-1 div.container div.flex-container {
+    /* background-color: chocolate; */
+}
+#section-1 div.container div.flex-container form {
+    /* background-color: blue; */
+}
+#section-1 div.container div.flex-container form div.flex-item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+#section-1 div.container div.flex-container form div.flex-item label {
+    margin: 5px 0px;
+}
+#section-1 div.container div.flex-container form div.flex-item span {
+    color: red;
+    margin-top: 7px;
+}
+#section-1 div.container div.flex-container form div.flex-item input[type=submit] {
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border-color: transparent;
+    font-size: 14pt;
+    transition: 0.3s;
+}
+#section-1 div.container div.flex-container form div.flex-item input[type=submit]:hover {
+    border-color: transparent;
+    background-color: rgb(0, 100, 0);
+}
+#section-1 div.container div.flex-container form div.flex-item input[type=submit]:focus {
+    border-color: transparent;
+}
+footer {
+    background-color: transparent;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+footer span{
+    color: #414141;
+    font-size: 11pt;
+}
