@@ -3,7 +3,7 @@
 # First install apache server and clone this repository
 * sudo apt-get install apache2
 * cd /var/www/html
-* git clone https://github.com/WellingtonCimentoOficial/captiveportalv1.git
+* git clone https://github.com/WellingtonCimentoOficial/captiveportalv1.git .
 * chown -R www-data /var/www/html
 
 # Second configure apache server to capative portal
