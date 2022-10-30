@@ -1,4 +1,4 @@
-# captiveportalv1
+# Captive Portal
 
 # First install apache server and clone this repository
 * sudo apt-get install apache2
