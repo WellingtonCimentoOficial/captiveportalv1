@@ -20,6 +20,20 @@ const blockSubmitButton = (value) => {
     }
 }
 
+const blockInputs = (value) => {
+    if(value){
+        password1.disabled = true
+        password1.style.pointerEvents = "none"
+        password2.disabled = true
+        password2.style.pointerEvents = "none"
+    }else{
+        password1.disabled = false
+        password1.style.pointerEvents = "auto"
+        password2.disabled = false
+        password2.style.pointerEvents = "auto"
+    }
+}
+
 const handlePassword1 = (e) => {
     password1_message.textContent = ""
     if(e.target.value.length >= 8){
@@ -42,20 +56,32 @@ const Post = async () => {
         body: data
     })
     if(response.status === 200){
-        window.location.href = "https://google.com/"
+        setTimeout(() => {
+            btn_submit.value = "Redirecionando..."
+            setTimeout(() => {
+                btn_submit.value = "Conectado"
+                window.location.href = "https://google.com/"
+            }, 3000)
+        }, 3000)
     }else{
         password1.value = ""
         password2.value = ""
         password2_message.textContent = "Senhas não correspondem"
         password1_message.textContent = "Senhas não correspondem"
+        btn_submit.value = "Conectar"
+        blockInputs(false)
+        blockSubmitButton(false)
     }
 }
 
-const handleSubmit = async (e) => {
+const handleSubmit = (e) => {
     e.preventDefault()
     if(password2.value !== password1.value){
         password2_message.textContent = "Senhas não conferem"
     }else{
+        blockInputs(true)
+        blockSubmitButton(true)
+        btn_submit.value = "Conectando..."
         Post()
     }
 }
