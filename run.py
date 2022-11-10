@@ -19,7 +19,8 @@ class Captive:
 		print("2 - D Link")
 		print("3 - Intelbras")
 		print("4 - HUAWEI")
-		print("5 - XIAOMI\n")
+		print("5 - XIAOMI")
+		print("6 - EDIMAX\n")
 		while True:
 			manufacturer = input("Choose a manufacturer: ")
 			if manufacturer == "1":
@@ -36,6 +37,9 @@ class Captive:
 				break
 			elif manufacturer == "5":
 				self.manufacturer = "xiaomi"
+				break
+			elif manufacturer == "6":
+				self.manufacturer = "edimax"
 				break
 			else:
 				print("Invalid option")	
