@@ -58,6 +58,7 @@ class Captive:
 		os.system("echo 'RewriteCond %{REQUEST_FILENAME} !-d' >> /var/www/html/.htaccess")
 		os.system("echo 'RewriteCond %{REQUEST_FILENAME} !-f' >> /var/www/html/.htaccess")
 		os.system("echo 'RewriteRule . index.html [L]' >> /var/www/html/.htaccess")
+		os.system("chown -R www-data /var/www/html/")
 		os.system("sudo systemctl restart apache2")
 
 
