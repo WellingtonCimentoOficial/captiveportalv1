@@ -9,7 +9,7 @@ class Captive:
 	def menu_essid(self):
 		essid = input("Network ESSID: ")
 		if essid != "":
-			self.essid = essid
+			self.essid = str(essid).replace(" ", "-")
 		else:
 			self.menu_essid()
 
